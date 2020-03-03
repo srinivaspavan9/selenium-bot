@@ -8,14 +8,7 @@ app=Flask(__name__)
 
 # Classified info
 config={
-	"apiKey": "AIzaSyCSI7Q8pfZKVMUVLyozu1cotrqLT6nTL7k",
-    "authDomain": "mercurytest-2e954.firebaseapp.com",
-    "databaseURL": "https://mercurytest-2e954.firebaseio.com",
-    "projectId": "mercurytest-2e954",
-    "storageBucket": "mercurytest-2e954.appspot.com",
-    "messagingSenderId": "788660786273",
-    "appId": "1:788660786273:web:b05c583680b02176a24620",
-    "measurementId": "G-GXBMF19XHQ"
+	# configuration information
 }
 
 
@@ -59,7 +52,7 @@ def store():
         try:
             smtp=smtplib.SMTP('smtp.gmail.com',587)
             smtp.starttls()
-            smtp.login("mercurybot27@gmail.com","Password@123")
+            smtp.login(botemailid,botmail password)
             # web scraping
             browser=webdriver.Chrome()
             browser.get('https://erp.cbit.org.in/Login.aspx?ReturnUrl=%2f')
@@ -81,7 +74,7 @@ def store():
             sub3.click()
             # print(message)
             # sending the mail
-            smtp.sendmail("mercurybot27@gmail.com",em,message)
+            smtp.sendmail(botmailid,em,message)
             smtp.quit()
              # pushing into database
             db.child("users").push(details)

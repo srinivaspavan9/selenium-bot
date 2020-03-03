@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% if status["flag"] == 1 %}
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>Aww yeah, you successfully registered for our email service.</p>
+            <hr>
+            <p class="mb-0">New notification features are yet to come so dont opt out of the services.</p>
+        </div>
+    {% endif %}
+    {%if status["flag"] == 2 %}
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">It seems the user already exists</h4>
+        <p>Registration not required, The user already exists</p>
+        <hr>
+        <p class="mb-0">Sayonara.......</p>
+    </div>
+    {% endif %}
+    {%if status["flag"] == 3 %}
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Hmm, there was a problem with the server.</h4>
+        <p>Try again later.</p>
+        <hr>
+        <p class="mb-0">Please try again.</p>
+    </div>
+    {% endif %}
+    <center><a class="btn btn-secondary" href="{{ url_for('home') }}" role="button">Get back</a></center>>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block body%}
+    <br>
+     <!-- alert board starts here  -->
+     <div class="alert alert-info" role="alert">
+      <h4 class="alert-heading">To Register,</h4>
+      <p>enter the correct details of the CBIT student portal.Password must be exactly that which you have given in the cbit student portal.</p>
+      <hr>
+      <p class="mb-0">Finally chose the email id to which you want to receive notifications to .</p>
+    </div>
+    <!-- Registration form starts here -->
+    <div class="container-fluid">
+        <div class="row" >
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <!-- Material form login -->
+<div class="card">
+
+        <h5 class="card-header info-color white-text text-center py-4">
+          <strong>Register</strong>
+        </h5>
+      
+        <!--Card content-->
+        <div class="card-body px-lg-5 pt-0">
+      
+          <!-- Form -->
+          <form class="text-center" style="color: #757575;" action="/store" method="POST">
+      
+            <!-- Email -->
+            <div class="md-form">
+              <label for="materialLoginFormEmail">Roll Number</label>
+              <input type="text" id="materialLoginFormEmail" class="form-control" name="rollno">
+            </div>
+      
+            <!-- Password -->
+            <div class="md-form">
+              <label for="materialLoginFormPassword">Password</label>
+              <input type="text" id="materialLoginFormPassword" class="form-control" name="password">
+            </div>
+
+            <div class="md-form">
+                    <label for="materialLoginFormEmail">Email Id</label>
+                    <input type="text" id="materialLoginFormEmail2" class="form-control" name="email">
+            </div>
+      
+            <div class="d-flex justify-content-around">
+
+            </div>
+      
+            <!-- Sign in button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Register</button>
+      
+            <!-- Register -->
+      
+          </form>
+          <!-- Form -->
+      
+        </div>
+      
+      </div>
+      <!-- Material form login -->
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+    </div>
+    <!-- Registration form ends here -->
+    <br>
+   <center> <p style="color: red;"><i>Anonymous confessions comming soon!!</i></p></center>
+{% endblock%}
